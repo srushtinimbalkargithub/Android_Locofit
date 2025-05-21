@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="225dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="125dp"
+        android:src="@drawable/logo_landscape_round_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/rubik"
+        android:paddingLeft="25dp"
+        android:text="Create your Account"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/signupUsernameField"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/field_background"
+        android:elevation="4dp"
+        android:ems="10"
+        android:fontFamily="@font/rubik"
+        android:hint="Username"
+        android:inputType="text"
+        android:paddingLeft="25dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/signupPasswordField"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/field_background"
+        android:elevation="4dp"
+        android:ems="10"
+        android:fontFamily="@font/rubik"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupUsernameField" />
+
+    <EditText
+        android:id="@+id/signupConfirmPasswordField"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/field_background"
+        android:elevation="4dp"
+        android:ems="10"
+        android:fontFamily="@font/rubik"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:paddingLeft="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupPasswordField" />
+
+    <Button
+        android:id="@+id/proceedBtn"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/rubik"
+        android:text="Proceed"
+        android:textAllCaps="false"
+        android:textColor="@color/background_color_light_azul"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupConfirmPasswordField" />
+
+    <TextView
+        android:id="@+id/registerShowMessageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proceedBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/showUserFirstName"
+        android:layout_width="169dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/background_color_light_azul"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoutBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/field_background"
+        android:src="@drawable/logout_icon_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePicView"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/defaultprofilepic"
+        app:civ_border_color="@color/dark_blue"
+        app:civ_border_width="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/showGreeting"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/showGreeting"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/rubik"
+        android:text="How are you doing?"
+        android:textColor="@color/background_color_light_azul"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/showUserFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/showUserFirstName" />
+
+    <LinearLayout
+        android:id="@+id/walkingWidget"
+        android:layout_width="155dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/activity_background"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showGreeting">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Walking"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/walking" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/runningWidget"
+        android:layout_width="155dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/activity_background"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/walkingWidget"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Running"
+            android:textColor="@color/background_color_light_azul"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/running" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sprintingWidget"
+        android:layout_width="155dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/activity_background"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walkingWidget">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Sprinting"
+            android:textColor="@color/background_color_light_azul"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/sprinting" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/swimmingWidget"
+        android:layout_width="155dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/activity_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/sprintingWidget"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Swimming"
+            android:textColor="@color/background_color_light_azul"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/swimming" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bikingWidget"
+        android:layout_width="155dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/activity_background"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sprintingWidget">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Biking"
+            android:textColor="@color/background_color_light_azul"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/biking" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hikingWidget"
+        android:layout_width="155dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/activity_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/bikingWidget"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Hiking"
+            android:textColor="@color/background_color_light_azul"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/hiking" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/historyBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/field_background"
+        android:scaleType="fitCenter"
+        android:src="@drawable/history_icon_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
